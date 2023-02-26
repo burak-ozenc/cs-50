@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CS50 homepage exercises">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Burak Ozenc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c7e0fae78b.js" crossorigin="anonymous"></script>
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <title>Cat Magazine - Homepage</title>
+</head>
+<body>
+
+<!--BOOTSTRAP NAVBAR-->
+<div class="m-auto">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex">
+
+                <img src="assets/images/logo.png" width="70" height="70" alt="logo"
+                     class="d-inline-block align-middle mr-2">
+
+                <div class="font-weight-bold  m-1">
+                    <h3 class="text-justify">
+                        CAT MAGAZINE
+                    </h3>
+                    <p class="title-desc text-justify">
+                        CATS ARE EVERYWHERE
+                    </p>
+
+                </div>
+            </a>
+
+            <button type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarCS50"
+                    aria-controls="navbarCS50"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navbarCS50" class="collapse navbar-collapse m-3">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="breeds.html" class="nav-link">Breeds</a></li>
+                    <li class="nav-item"><a href="quiz.html" class="nav-link">Quiz</a></li>
+                    <li class="nav-item"><a href="gifs.html" class="nav-link">Gifs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!--BOOTSTRAP CAROUSEL-->
+<!--    https://getbootstrap.com/docs/5.2/components/carousel/-->
+<div class="carousel-wrapper">
+    <div id="cs50Carouselndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#cs50Carouselndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#cs50Carouselndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#cs50Carouselndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <!-- https://www.freepik.com/free-vector/flat-international-cat-day-horizontal-banner-template_28802430.htm#page=2&query=cat%20banner&position=10&from_view=search&track=sph-->
+                <img src="assets/images/1.jpg" class="d-block w-100" alt="carousel-1">
+            </div>
+            <div class="carousel-item">
+                <!-- https://www.freepik.com/free-psd/adopt-pet-banner-template_13296529.htm#page=3&query=cat%20banner&position=39&from_view=search&track=sph-->
+                <img src="assets/images/2.jpg" class="d-block w-100" alt="carousel-2">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/3.jpg" class="d-block w-100" alt="carousel-3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#cs50Carouselndicators"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#cs50Carouselndicators"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!--INDEX HEADER-->
+<div class="index-intro-header m-5 row">
+    <div class="col-md-12">
+        <h1>
+            CAT MAGAZINE
+        </h1>
+        <div>
+            <hr>
+            <p>
+                Welcome to the cat magazine! We are kindly presenting you, the loveliest creature in the world, the
+                cats.
+                Have fun and learn!
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--POLAROID EFFECT-->
+<div class="row m-5">
+    <div class="col-md-6 item m-auto">
+        <div class="polaroid">
+            <!--                https://pixabay.com/photos/cat-kitten-pets-animals-housecat-2934720/-->
+            <img src="assets/images/cat-polaroid.jpg" alt="cat-quiz">
+            <div class="caption">
+                <a href="quiz.html">
+                    Take The Quiz Now!
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
+        <h6 class="quiz-header">
+            True or False Quiz: Cats Edition
+        </h6>
+        <p>
+            Cats may not be called man’s best friend, but they’re still a beloved part of many homes. How much do
+            you know about your feline companion? Find out with this true or false quiz.
+        </p>
+    </div>
+</div>
+
+<!--FOOTER-->
+<footer>
+    <div class="footer-content">
+        <h3>Burak Özenç</h3>
+        <p>A person enjoys coding.</p>
+        <ul class="socials">
+            <li><a href="https://github.com/burrrrakozenc"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/burak-%C3%B6zen%C3%A7-073553131/"><i
+                    class="fa fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+    <div class="sticky">
+        <!--    https://giphy.com/gifs/cat-meow-meh-Op1E1159FsMrOg9V5J-->
+        <object data="assets/images/main-cat.gif" id="bottom-left-sticky"></object>
+    </div>
+</footer>
+</body>
+</html>

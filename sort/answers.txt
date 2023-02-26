@@ -1,0 +1,50 @@
+sort1 uses: Bubble Sort
+
+How do you know?:
+
+random50000.txt
+real    0m12.769s
+user    0m6.898s
+sys     0m0.244s
+---
+sorted50000.txt
+real    0m4.628s
+user    0m0.048s
+sys     0m0.186s
+---
+(Please see sort2 first)
+After selecting Merge Sort, we have available two sorting algorithms, sort1 and sort3.
+Bubble Sort has as a best case, which all the numbers are already ordered, n running time.
+After running sorted50000.txt for both algorithm, we see that sort1 is faster sort3.
+So sort1 is Bubble Sort.
+
+
+sort2 uses: Merge Sort
+
+How do you know?:
+
+random50000.txt
+real    0m3.204s
+user    0m0.031s
+sys     0m0.208s
+---
+All the time results for sorting random50000.txt given on under each sort.
+On sorting random numbers, Merge Sort has lower running time from the others which is n log n.
+With these results, we can define sort2 as Merge sort because in theory, it is the fastest sorting algorithm among all.
+
+
+sort3 uses: Selection Sort
+
+How do you know?:
+
+random50000.txt
+real    0m6.610s
+user    0m2.646s
+sys     0m0.206s
+---
+sorted50000.txt
+real    0m6.243s
+user    0m2.737s
+sys     0m0.237s
+---
+Please see sort2 and sort1

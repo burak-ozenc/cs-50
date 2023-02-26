@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Quoted
+{% endblock %}
+
+{% block main %}
+
+<div class="table-responsive">
+    <table class="table align-middle">
+        <thead>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Symbol
+            </th>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td class="align-top">{{ quote["name"] }}</td>
+                <td class="align-top">{{ quote["price"] }}</td>
+                <td class="align-top">{{ quote["symbol"] }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

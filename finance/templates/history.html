@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block main %}
+
+<div class="table-responsive">
+    <table class="table align-middle">
+        <thead>
+            <th>
+                Symbol
+            </th>
+            <th>
+                Shares
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Transaction Type
+            </th>
+            <th>
+                Transacted At
+            </th>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td class="align-top">{{transaction.symbol}}</td>
+                <td class="align-top">{{transaction.share}}</td>
+                <td class="align-top">{{usd(transaction.price)}}</td>
+                <td class="align-top">{{visualize_transaction_type(transaction.transaction_type)}}</td>
+                <td class="align-top">{{transaction.transacted_at}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

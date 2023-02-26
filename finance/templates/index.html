@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{% block main %}
+
+<div class="table-responsive">
+    <table class="table align-middle">
+        <thead>
+            <th>
+                Symbol
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Shares
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Total
+            </th>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+            <tr>
+                <td class="align-top">{{stock.symbol}}</td>
+                <td class="align-top">{{stock.name}}</td>
+                <td class="align-top">{{stock.count}}</td>
+                <td class="align-top">{{usd(symbol_prices[stock.symbol])}}</td>
+                <td class="align-top">{{usd(symbol_prices[stock.symbol] * stock.count)}}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+        <tfoot>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><b>Cash</b></td>
+              <td><b>{{usd(cash)}}</b></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b>Total</b></td>
+                <td><b>{{usd(total + cash )}}</b></td>
+                </tr>
+          </tfoot>
+    </table>
+</div>
+
+{% endblock %}

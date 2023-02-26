@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script>
+
+        window.addEventListener("click", (event) => {
+                if (event.target.className === 'correct') {
+                    console.log('found')
+                    event.target.classList.add("found");
+                    event.target.className.disabled = true
+                    document.getElementById("answer-1").innerHTML = "Correct!";
+                } else if (event.target.className === 'incorrect') {
+                    console.log('not-found')
+                    event.target.classList.add("not-found");
+                    event.target.className.disabled = true
+                    document.getElementById("answer-1").innerHTML = "Incorrect";
+                }
+            }
+        )
+
+
+        window.onload = function () {
+            document.getElementById('check').addEventListener('click', () => {
+                var input = document.querySelector('#q-2-text')
+                var answer = document.getElementById("answer-2");
+                if (input.value.toLowerCase() === 'china') {
+                    answer.innerHTML = "Correct!";
+                    input.style.background = 'green'
+                } else {
+                    answer.innerHTML = "Incorrect";
+                    input.style.background = 'red'
+                }
+
+            })
+        }
+
+    </script>
+</head>
+<body>
+<div class="header">
+    <h1>Trivia!</h1>
+</div>
+
+<div class="container">
+    <div class="section">
+        <h2>Part 1: Multiple Choice </h2>
+        <hr>
+        <h3>
+            There are how many sheep in the world currently in total?
+        </h3>
+
+        <button class="incorrect">Around 10.000(ten thousand)</button>
+        <button class="incorrect">Around 100,000(one hundred thousand)</button>
+        <button class="incorrect">Around 1,000,000(one million)</button>
+        <button class="correct">Around 1,000,000,000(one billion)</button>
+        <button class="incorrect">Around 1,000,000,000,000(one trillion)</button>
+
+        <p id="answer-1"></p>
+    </div>
+
+    <div class="section">
+        <h2>Part 2: Free Response</h2>
+        <hr>
+        <h3>
+            Which country has most sheep in the world in general?
+        </h3>
+        <input type="text" id="q-2-text"></input>
+        <button id="check">Check Answer</button>
+        <p id="answer-2"></p>
+    </div>
+</div>
+</body>
+</html>
